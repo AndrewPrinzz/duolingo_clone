@@ -1,0 +1,5 @@
+interface LanguagesData {
+  
+}
+
+export {LanguagesData}
