@@ -5,6 +5,7 @@ import {
   QueryClientProvider,
 } from '@tanstack/react-query'
 import {BrowserRouter as Router} from 'react-router-dom'
+import { SentenceReducerProvider, SentenceCacheProvider } from 'context/sentence-reducer'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -32,7 +33,11 @@ function AppProviders({children}) {
   return (
     <QueryClientProvider client={queryClient}>
       <Router>
-        {children}
+        <SentenceCacheProvider>
+          <SentenceReducerProvider>
+            {children}
+          </SentenceReducerProvider>
+        </SentenceCacheProvider>
       </Router>
     </QueryClientProvider>
   )

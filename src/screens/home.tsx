@@ -15,6 +15,7 @@ function Home() {
       </Title>
       <img css={{
         maxWidth: '450px',
+        minHeight: '450px',
         margin: 'auto'
       }} src={image} />
       

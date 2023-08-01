@@ -7,6 +7,8 @@ import {Container} from './compontents/lib'
 import {Home} from 'screens/home'
 import {SelectLanguage} from 'screens/select-language'
 import {BrowserRouter as Router, Link as RouterLink, Routes, Route} from 'react-router-dom'
+import { LanguageTopic } from 'screens/language-topic'
+import { SentenceBuider } from 'screens/sentence-builder'
 
 const logo = require('./assets/img/logo.svg').default
 
@@ -46,11 +48,15 @@ function Footer() {
 
 function App() {
   return ( 
-    <Container>
-      <Header />
-        <AppRoutes />
-      <Footer />
-    </Container>
+    <>
+      {/* <Container> */}
+        <Container>
+          <Header />
+        </Container>
+          <AppRoutes />
+        <Footer />
+      {/* </Container> */}
+    </>
   )
 }
 
@@ -59,7 +65,8 @@ function AppRoutes() {
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/select-language/' element={<SelectLanguage />} />
-      <Route path='/language-exercise' element={<div>test</div>} />
+      <Route path='/select-language/:id/' element={<LanguageTopic />} />
+      <Route path='/select-language/:id/:id/' element={<SentenceBuider />} />
     </Routes>
   )
 }

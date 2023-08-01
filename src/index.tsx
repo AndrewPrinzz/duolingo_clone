@@ -8,6 +8,7 @@ import {
   useQuery,
 } from '@tanstack/react-query'
 import { AppProviders } from 'context/app-providers';
+import { FullPageSpinner } from 'compontents/lib';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -15,8 +16,10 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <AppProviders>
-      <App />
-    </AppProviders>
+    <React.Suspense fallback={<FullPageSpinner />}>
+      <AppProviders>
+        <App />
+      </AppProviders>
+    </React.Suspense>
   </React.StrictMode>
 );
