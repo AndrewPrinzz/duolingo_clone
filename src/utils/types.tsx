@@ -49,5 +49,6 @@ export type sentenceState = {
   listOfWords: {[key: string]: string}[] | {};
   storeClickedWord: sentenceAddWordAction['payload']['clickedWord'][];
   answer?: 'correct' | 'incorrect' | 'await';
-  complete?: boolean
+  complete?: boolean,
+  teacherImage: string;
 }

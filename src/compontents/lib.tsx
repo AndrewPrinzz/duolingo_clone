@@ -5,7 +5,7 @@ import * as React from 'react'
 import {keyframes} from '@emotion/css'
 
 import {Colors} from 'styles/colors'
-import styled from '@emotion/styled'
+import styled from "@emotion/styled/macro"
 import {css} from '@emotion/react'
 import {Link} from 'react-router-dom'
 import {FaSpinner} from 'react-icons/fa'
@@ -24,46 +24,19 @@ export function FullPageSpinner() {
     <div
       css={{
         fontSize: '4em',
-        height: '100vh',
+        height: '300px',
         width: '100%',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        background: '#000'
+        // background: '#000'
       }}
     >
       <Spinner />
     </div>
   )
 }
-
-export const Container = styled.div`
-  width: 1040px;
-  margin: auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  display: flex;
-  flex-direction: column;
-`
-
-export const HomeScreen = styled.div`
-  margin-top: 140px;
-  display: flex;
-  flex-direction: column;
-`
-
-export const Title = styled.div`
-  font-size: 32px;
-  color: ${Colors.default};
-  font-weight: 700;
-`
-
-export const TitleWithSpace = styled(Title)`
-  text-align: center;
-  margin-top: 140px;
-  margin-bottom: 60px;
-`
 
 type ButtonProps = {
   btnStyle?: "gray" | "red" | undefined
@@ -89,10 +62,77 @@ export const Button = styled.div<ButtonProps>(({btnStyle}) => css`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  max-width: 100%;
   :hover {
     /* color: #fff!important; */
   }
+  :active {
+    /* Styles for pressing effect */
+    transform: translateY(2px); /* Adjust the amount of translation as needed */
+    box-shadow: none; /* Remove the shadow while pressing */
+  }
 `)
+
+export const Container = styled.div`
+  max-width: 1040px;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+`
+
+export const Title = styled.div`
+  font-size: 32px;
+  color: ${Colors.default};
+  font-weight: 700;
+`
+
+export const HomeScreen = styled.div`
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 100px;
+  img {
+    min-width: 450px;
+    min-height: 450px;
+  }
+  @media (max-width: 767px) {
+    padding-left: 10px;
+    padding-right: 20px;
+    img {
+      min-width: 100%;
+      min-height: 100%;
+    }
+  }
+  ${Title} {
+    font-size: 24px;
+  }
+  ${Button} {
+
+  }
+`
+
+export const TitleWithSpace = styled(Title)`
+  text-align: center;
+  /* margin-top: 140px;
+  margin-bottom: 60px; */
+  @media (max-width: 767px) {
+    font-size: 25px;
+    /* margin-top: 30px;
+    margin-bottom: 30px; */
+  }
+`
+
+export const TitleContainer = styled.div`
+  margin-top: 120px;
+  margin-bottom: 30px;
+  @media (max-width: 767px) {
+    font-size: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+`
 
 interface LanguageContainerProps {
   width?: number;
@@ -101,13 +141,25 @@ interface LanguageContainerProps {
 export const LanguagesContainer = styled.div<LanguageContainerProps>(({width = 672}) => css`
   display: flex;
   margin: auto;
-  width: ${width + 20}px;
+  max-width: ${width + 20}px;
   flex-wrap: wrap;
   padding-left: 10px;
   padding-right: 10px;
   justify-content: center;
   flex-direction: column;
+  margin-top: 0;
+  @media (max-width: 767px) {
+    max-width: 100%;
+  }
 `)
+
+export const Languages = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  @media (max-width: 692px) {
+    justify-content: space-between;
+  }
+`
 
 export const Language = styled(Link)`
   width: 180px;
@@ -120,6 +172,7 @@ export const Language = styled(Link)`
   padding: 25px 40px;
   margin-left: 22px;
   margin-right: 22px;
+  margin-bottom: 30px;
   span {
     margin-top: 9px;
     color: #000;
@@ -127,6 +180,12 @@ export const Language = styled(Link)`
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
+  }
+  @media (max-width: 692px) {
+    width: 40%;
+  }
+  @media (max-width: 480px) {
+    width: 100%;
   }
 `
 
@@ -157,19 +216,26 @@ export const TopicBlock = styled.div`
   :not(:first-of-type) {
     margin-top: 40px;
   }
-`
-
-export const RemoveWord = styled.div`
-  margin-left: auto;
-  img {
-    width: 51px;
-    cursor: pointer;
+  @media (max-width: 576px) {
+    flex-direction: column;
+    a {
+      min-width: 100%;      
+      div {
+        width: 100%;
+      }
+    }
+    span {
+      margin: 20px 0px;
+      text-align: center;
+      font-size: 22px;
+    }
   }
 `
 
 export const SentenceTop = styled.div`
   display: flex;
   align-items: end;
+  marginTop: 15px;
   span {
     color: ${Colors.purple};
     text-decoration: underline;
@@ -180,6 +246,23 @@ export const SentenceTop = styled.div`
     transform: translateY(-34px);
     font-weight: 700;
     margin-right: 30px;
+  }
+  img {
+    width: 111px;
+    height: 165px;
+  }
+  @media (max-width: 767px) {
+    img {
+      width: 70px;
+      height: 104px;
+    }
+    span {
+      padding: 15px;
+      font-size: 14px;
+      @media (max-width: 767px) {
+        margin-top: 20px;
+      }
+    }
   }
 `
 
@@ -194,9 +277,30 @@ export const SentenceMiddle = styled.div`
     content: '';
     height: 2px;
     width: 100%;
-    background: ${Colors.grayBg};
+    /* background: ${Colors.grayBg}; */
     position: absolute;
-    top: 50%;
+    top: 58px;
+  }
+  @media (max-width: 767px) {
+    min-height: 90px;
+    :before {
+      top: 43px;
+    }
+  }
+`
+
+export const RemoveWord = styled.div`
+  margin-left: auto;
+  img {
+    max-width: 51px!important;
+    width: 51px!important;
+    max-height: 51px!important;
+    cursor: pointer;
+    @media (max-width: 767px) {
+      max-width: 35px!important;
+      width: 35px!important;
+      max-height: 35px!important;
+    }
   }
 `
 
@@ -210,7 +314,7 @@ export const SentenceBottom = styled.div`
 export const SentenceWord = styled.div`
   display: flex;
   font-size: 15px;
-  text-transform: lowercase;
+  /* text-transform: lowercase; */
   color: ${Colors.default};
   border-radius: 12px;
   border: 2px solid #E5E5E5;
@@ -222,8 +326,23 @@ export const SentenceWord = styled.div`
   font-weight: 600;
   cursor: pointer;
   height: 50px;
+  /* position: relative; */
   :not(:last-child) {
     margin-right: 5px;
+  }
+  :before {
+    /* content: '';
+    position: absolute;
+    height: 2px;
+    background: red;
+    width: 100%;
+    left: 0;
+    top: -2px */
+  }
+  @media (max-width: 767px) {
+    font-size: 12px;
+    height: 34px;
+    padding: 8px 11px;
   }
 `
 
@@ -238,7 +357,21 @@ export const AnswerContainer = styled.div<AnswerContainerProps>(({background = '
   align-items: center;
   padding-left: 160px;
   padding-right: 160px;
-  min-height: 150px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-height: 130px;
+  @media (max-width: 940px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @media (max-width: 767px) {
+    ${Button} {
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      padding: 10px 40px 10px 40px;
+      
+    }
+  }
 `)
 
 export const AnswerBarLeft = styled.div`
@@ -281,3 +414,34 @@ export const BackArrow = styled.div`
     font-weight: 700;
   }
 `
+
+export const SentenceBuilderContainer = styled.div`
+  height: calc(100vh - 82px);
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 767px) {
+    marginTop: -40px;
+  }
+`
+
+export const AnswerContainerResponse = styled(AnswerContainer)`
+  @media (max-width: 767px) {
+    flex-direction: column;
+    ${Button} {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    img {
+      width: 60px;
+    }
+    ${AnswerBarTitle} {
+      font-size: 18px;
+    }
+    ${AnswerBarCorrect} {
+      font-size: 14px;
+    }
+    ${AnswerBarLeft} {
+      margin-top: 13px;
+    }
+  }
+` 

@@ -2,24 +2,23 @@
 import {jsx} from '@emotion/react'
 
 import {useSentenceReducer} from "context/sentence-reducer";
-import {AnswerContainer, AnswerBarCorrect, AnswerBarIcon, AnswerBarLeft, AnswerBarRight, AnswerBarTitle, Button } from "./lib";
+import {AnswerContainer, AnswerContainerResponse, AnswerBarCorrect, AnswerBarIcon, AnswerBarLeft, AnswerBarRight, AnswerBarTitle, Button } from "./lib";
 import { Colors } from 'styles/colors';
 import {useParams} from 'react-router-dom';
-
-const wrongAnswerImage = require('assets/img/wrong.svg').default
-const correctAnswerImage = require('assets/img/correct-answer.svg').default
-
-
+import { imageList } from './preload-images';
 
 function AnswerAwaitAnswer() {
-  const pageId = useParams()
-  const [data, dispatch] = useSentenceReducer()
+  const [, dispatch] = useSentenceReducer()
 
   return (
     <>
       <AnswerContainer background="#fff" css={{borderTop: `2px solid ${Colors.grayBg}`}}>
         <AnswerBarLeft>
-          <Button btnStyle="gray">Skip</Button>
+          <Button btnStyle="gray"
+            onClick={() => dispatch({
+              type: 'update'
+            })}
+          >Skip</Button>
         </AnswerBarLeft>
           <Button
             onClick={() => dispatch({
@@ -32,19 +31,18 @@ function AnswerAwaitAnswer() {
 }
 
 function AnswerCorrectAnswer() {
-  const pageId = useParams()
   const [data, dispatch] = useSentenceReducer()
 
   return (
     <>
-      <AnswerContainer background='#D7FFB8'>
+      <AnswerContainerResponse background='#D7FFB8'>
         <AnswerBarLeft>
           <AnswerBarIcon>
-            <img src={correctAnswerImage} />
+            <img src={imageList.correctAnswer} />
           </AnswerBarIcon>
           <div>
             <AnswerBarTitle css={{color: '#58A700'}}>Nice!</AnswerBarTitle>
-            <AnswerBarCorrect css={{color: '#58A700'}}>I love cocoa</AnswerBarCorrect>
+            <AnswerBarCorrect css={{color: '#58A700'}}>{data.sentence.translated_sentence}</AnswerBarCorrect>
           </div>
         </AnswerBarLeft>
         <AnswerBarRight>
@@ -52,20 +50,19 @@ function AnswerCorrectAnswer() {
               type: 'update'
             })}>Continue</Button>
         </AnswerBarRight>
-      </AnswerContainer>
+      </AnswerContainerResponse>
     </>
   )
 }
 
 function AnswerWrongAnswer() {
-  const pageId = useParams()
   const [data, dispatch] = useSentenceReducer()
 
   return (
-    <AnswerContainer>
+    <AnswerContainerResponse>
       <AnswerBarLeft>
         <AnswerBarIcon>
-          <img src={wrongAnswerImage} />
+          <img src={imageList.wrongAnswer} />
         </AnswerBarIcon>
         <div>
           <AnswerBarTitle>Correct solution:</AnswerBarTitle>
@@ -80,7 +77,7 @@ function AnswerWrongAnswer() {
           btnStyle='red'
         >Continue</Button>
       </AnswerBarRight>
-    </AnswerContainer>
+    </AnswerContainerResponse>
   )
 }
 

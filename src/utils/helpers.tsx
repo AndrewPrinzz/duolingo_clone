@@ -23,8 +23,8 @@ function getRandomInt(max: number, prevIdx?: number): number {
   if (prevIdx) max = max - 1
   let randomInt = Math.floor(Math.random() * max)
   // if randomInt is equal to what we had before, we add 1 to it. We can do it because we took 1 from our length before
-  if (prevIdx && randomInt === prevIdx) randomInt++
-
+  if ((prevIdx || prevIdx === 0) && (randomInt === prevIdx)) randomInt++
+  
   return randomInt
 }
 

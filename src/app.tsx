@@ -6,23 +6,13 @@ import * as React from 'react'
 import {Container} from './compontents/lib'
 import {Home} from 'screens/home'
 import {SelectLanguage} from 'screens/select-language'
-import {BrowserRouter as Router, Link as RouterLink, Routes, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Link as RouterLink, Routes, Route, Link} from 'react-router-dom'
 import { LanguageTopic } from 'screens/language-topic'
 import { SentenceBuider } from 'screens/sentence-builder'
+import { PreloadImages } from 'compontents/preload-images'
+import config from 'config.json'
 
-const logo = require('./assets/img/logo.svg').default
-
-type ErrorProps = {
-  error: string
-}
-
-function ErrorFallback({error}: ErrorProps) {
-  return (
-    <div>
-      An error ocured {error}
-    </div>
-  )
-}
+const logo = `${config.serverUrl}wp-content/uploads/2023/08/logo.svg`
 
 function Header() {
   return (
@@ -31,9 +21,9 @@ function Header() {
       display: 'flex',
       paddingTop: '40px',
     }}>
-      <div>
+      <Link to="/">
         <img src={logo} alt="" />
-      </div>
+      </Link>
     </div>
   )
 }
@@ -49,13 +39,12 @@ function Footer() {
 function App() {
   return ( 
     <>
-      {/* <Container> */}
-        <Container>
-          <Header />
-        </Container>
-          <AppRoutes />
-        <Footer />
-      {/* </Container> */}
+      <Container>
+        <Header />
+        <PreloadImages />
+      </Container>
+        <AppRoutes />
+      <Footer />
     </>
   )
 }

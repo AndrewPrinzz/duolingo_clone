@@ -2,6 +2,11 @@ import { getRandomInt, shuffle } from "utils/helpers"
 import type { sentenceActions, sentenceState } from "utils/types"
 import { LanguageDataObject } from "utils/hooks"
 import React, {Dispatch} from "react"
+import { imageList } from "compontents/preload-images"
+
+function getRandomTeacherImage(): string {
+  return imageList.persons[getRandomInt(Object.values(imageList.persons).length)]
+}
 
 const initialState: sentenceState = {
   data: null,
@@ -10,8 +15,11 @@ const initialState: sentenceState = {
   listOfWords: {},
   storeClickedWord: [],
   answer: 'await',
-  complete: false
+  complete: false,
+  teacherImage: getRandomTeacherImage()
 }
+
+const regex = /[:.;"»«?!]/g;
 
 function sentenceReducer(
   sentenceState: sentenceState, 
@@ -22,7 +30,10 @@ function sentenceReducer(
     const currSentence = currTopicData[index]
     
     let allPossibleWords = currSentence.possible_words.map(({word}) => (word))
-    allPossibleWords.push(...currSentence.translated_sentence.split(' '))
+    
+    allPossibleWords.push(
+      ...currSentence.translated_sentence.replace(regex, '').split(' ')
+    )
     const shuffled = shuffle(Array.from(allPossibleWords))
     const ret = shuffled.reduce((acc, item, index) => {
       acc[`${item}-${index}`] = item
@@ -44,7 +55,7 @@ function sentenceReducer(
     case 'update':
       const {data, prevIndex} = sentenceState
       const randomSentenceIndex = getRandomInt(data.acf.words.length, prevIndex)
-
+      
       return {
         ...sentenceState,
         sentence: sentenceState.data.acf.words[randomSentenceIndex],
@@ -52,7 +63,8 @@ function sentenceReducer(
         listOfWords: sentenceMixer(sentenceState.data, randomSentenceIndex),
         storeClickedWord: [],
         answer: 'await',
-        complete: false
+        complete: false,
+        teacherImage: getRandomTeacherImage()
       }
     case 'add-word':
       if (sentenceState.complete) return sentenceState
@@ -74,7 +86,7 @@ function sentenceReducer(
     case 'reset':
       return {...initialState}
     case 'check':
-      const translatedSentence = sentenceState.sentence.translated_sentence.split(' ')
+      const translatedSentence = sentenceState.sentence.translated_sentence.replace(regex, '').split(' ')
       const createdSentence = sentenceState.storeClickedWord
 
       let answer: 'correct' | 'incorrect' = 'correct';
@@ -84,7 +96,7 @@ function sentenceReducer(
         answer = 'incorrect'
       } else {
         for (let i = 0; i < createdSentence.length; i++) {
-          if (createdSentence[i][1] !== translatedSentence[i]) {
+          if (createdSentence[i][1].toLowerCase() !== translatedSentence[i].toLowerCase()) {
             // if a word from createdSentence is not equal to a word in translatedSentence the answer is wrong
             answer = 'incorrect'
             break
