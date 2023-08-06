@@ -94,19 +94,23 @@ export const HomeScreen = styled.div`
   flex-direction: column;
   padding-bottom: 100px;
   img {
-    min-width: 450px;
-    min-height: 450px;
+    width: 450px;
+    height: 450px;
+    margin: auto;
   }
   @media (max-width: 767px) {
     padding-left: 10px;
     padding-right: 20px;
     img {
-      min-width: 100%;
-      min-height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      height: auto;
     }
   }
-  ${Title} {
-    font-size: 24px;
+  @media (max-width: 767px) {
+    ${Title} {
+      font-size: 24px;
+    }
   }
   ${Button} {
 
