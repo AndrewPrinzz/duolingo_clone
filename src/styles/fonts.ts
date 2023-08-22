@@ -13,8 +13,7 @@ injectGlobal`
 
   @font-face {
 	font-family: 'Montserrat';
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat-Light.eot');
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat Light'), url('https://andrew-dev.com/assets/fonts/Montserrat-Light'),
+	src:
 		url('https://andrew-dev.com/assets/fonts/Montserrat-Light.eot?#iefix') format('embedded-opentype'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-Light.woff') format('woff'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-Light.ttf') format('truetype');
@@ -24,8 +23,7 @@ injectGlobal`
 
 @font-face {
 	font-family: 'Montserrat';
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat-MediumItalic.eot');
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat Medium Italic'), url('https://andrew-dev.com/assets/fonts/Montserrat-MediumItalic'),
+	src: 
 		url('https://andrew-dev.com/assets/fonts/Montserrat-MediumItalic.eot?#iefix') format('embedded-opentype'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-MediumItalic.woff') format('woff'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-MediumItalic.ttf') format('truetype');
@@ -35,8 +33,7 @@ injectGlobal`
 
 @font-face {
 	font-family: 'Montserrat';
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat-Thin.eot');
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat Thin'), url('https://andrew-dev.com/assets/fonts/Montserrat-Thin'),
+	src: 
 		url('https://andrew-dev.com/assets/fonts/Montserrat-Thin.eot?#iefix') format('embedded-opentype'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-Thin.woff') format('woff'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-Thin.ttf') format('truetype');
@@ -46,8 +43,7 @@ injectGlobal`
 
 @font-face {
 	font-family: 'Montserrat';
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat-ExtraLightItalic.eot');
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat ExtraLight Italic'), url('https://andrew-dev.com/assets/fonts/Montserrat-ExtraLightItalic'),
+	src: 
 		url('https://andrew-dev.com/assets/fonts/Montserrat-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-ExtraLightItalic.woff') format('woff'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-ExtraLightItalic.ttf') format('truetype');
@@ -57,8 +53,7 @@ injectGlobal`
 
 @font-face {
 	font-family: 'Montserrat';
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat-BoldItalic.eot');
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat Bold Italic'), url('https://andrew-dev.com/assets/fonts/Montserrat-BoldItalic'),
+	src: 
 		url('https://andrew-dev.com/assets/fonts/Montserrat-BoldItalic.eot?#iefix') format('embedded-opentype'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-BoldItalic.woff') format('woff'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-BoldItalic.ttf') format('truetype');
@@ -68,8 +63,7 @@ injectGlobal`
 
 @font-face {
 	font-family: 'Montserrat';
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat-SemiBold.eot');
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat SemiBold'), url('https://andrew-dev.com/assets/fonts/Montserrat-SemiBold'),
+	src: 
 		url('https://andrew-dev.com/assets/fonts/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-SemiBold.woff') format('woff'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-SemiBold.ttf') format('truetype');
@@ -79,8 +73,7 @@ injectGlobal`
 
 @font-face {
 	font-family: 'Montserrat';
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat-ExtraLight.eot');
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat ExtraLight'), url('https://andrew-dev.com/assets/fonts/Montserrat-ExtraLight'),
+	src: 
 		url('https://andrew-dev.com/assets/fonts/Montserrat-ExtraLight.eot?#iefix') format('embedded-opentype'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-ExtraLight.woff') format('woff'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-ExtraLight.ttf') format('truetype');
@@ -90,8 +83,7 @@ injectGlobal`
 
 @font-face {
 	font-family: 'Montserrat';
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat-ExtraBoldItalic.eot');
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat ExtraBold Italic'), url('https://andrew-dev.com/assets/fonts/Montserrat-ExtraBoldItalic'),
+	src: 
 		url('https://andrew-dev.com/assets/fonts/Montserrat-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-ExtraBoldItalic.woff') format('woff'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-ExtraBoldItalic.ttf') format('truetype');
@@ -101,8 +93,7 @@ injectGlobal`
 
 @font-face {
 	font-family: 'Montserrat';
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat-Italic.eot');
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat Italic'), url('https://andrew-dev.com/assets/fonts/Montserrat-Italic'),
+	src: 
 		url('https://andrew-dev.com/assets/fonts/Montserrat-Italic.eot?#iefix') format('embedded-opentype'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-Italic.woff') format('woff'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-Italic.ttf') format('truetype');
@@ -112,8 +103,7 @@ injectGlobal`
 
 @font-face {
 	font-family: 'Montserrat';
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat-Bold.eot');
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat Bold'), url('https://andrew-dev.com/assets/fonts/Montserrat-Bold'),
+	src: 
 		url('https://andrew-dev.com/assets/fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-Bold.woff') format('woff'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-Bold.ttf') format('truetype');
@@ -123,8 +113,7 @@ injectGlobal`
 
 @font-face {
 	font-family: 'Montserrat';
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat-LightItalic.eot');
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat Light Italic'), url('https://andrew-dev.com/assets/fonts/Montserrat-LightItalic'),
+	src: 
 		url('https://andrew-dev.com/assets/fonts/Montserrat-LightItalic.eot?#iefix') format('embedded-opentype'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-LightItalic.woff') format('woff'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-LightItalic.ttf') format('truetype');
@@ -134,8 +123,7 @@ injectGlobal`
 
 @font-face {
 	font-family: 'Montserrat';
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat-BlackItalic.eot');
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat Black Italic'), url('https://andrew-dev.com/assets/fonts/Montserrat-BlackItalic'),
+	src: 
 		url('https://andrew-dev.com/assets/fonts/Montserrat-BlackItalic.eot?#iefix') format('embedded-opentype'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-BlackItalic.woff') format('woff'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-BlackItalic.ttf') format('truetype');
@@ -145,8 +133,7 @@ injectGlobal`
 
 @font-face {
 	font-family: 'Montserrat';
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat-SemiBoldItalic.eot');
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat SemiBold Italic'), url('https://andrew-dev.com/assets/fonts/Montserrat-SemiBoldItalic'),
+	src: 
 		url('https://andrew-dev.com/assets/fonts/Montserrat-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-SemiBoldItalic.woff') format('woff'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-SemiBoldItalic.ttf') format('truetype');
@@ -156,8 +143,7 @@ injectGlobal`
 
 @font-face {
 	font-family: 'Montserrat';
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat-Regular.eot');
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat Regular'), url('https://andrew-dev.com/assets/fonts/Montserrat-Regular'),
+	src:
 		url('https://andrew-dev.com/assets/fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-Regular.woff') format('woff'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-Regular.ttf') format('truetype');
@@ -167,8 +153,7 @@ injectGlobal`
 
 @font-face {
 	font-family: 'Montserrat';
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat-Medium.eot');
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat Medium'), url('https://andrew-dev.com/assets/fonts/Montserrat-Medium'),
+	src: 
 		url('https://andrew-dev.com/assets/fonts/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-Medium.woff') format('woff'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-Medium.ttf') format('truetype');
@@ -178,8 +163,7 @@ injectGlobal`
 
 @font-face {
 	font-family: 'Montserrat';
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat-ExtraBold.eot');
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat ExtraBold'), url('https://andrew-dev.com/assets/fonts/Montserrat-ExtraBold'),
+	src: 
 		url('https://andrew-dev.com/assets/fonts/Montserrat-ExtraBold.eot?#iefix') format('embedded-opentype'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-ExtraBold.woff') format('woff'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-ExtraBold.ttf') format('truetype');
@@ -189,8 +173,7 @@ injectGlobal`
 
 @font-face {
 	font-family: 'Montserrat';
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat-Black.eot');
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat Black'), url('https://andrew-dev.com/assets/fonts/Montserrat-Black'),
+	src: 
 		url('https://andrew-dev.com/assets/fonts/Montserrat-Black.eot?#iefix') format('embedded-opentype'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-Black.woff') format('woff'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-Black.ttf') format('truetype');
@@ -200,8 +183,7 @@ injectGlobal`
 
 @font-face {
 	font-family: 'Montserrat';
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat-ThinItalic.eot');
-	src: url('https://andrew-dev.com/assets/fonts/Montserrat Thin Italic'), url('https://andrew-dev.com/assets/fonts/Montserrat-ThinItalic'),
+	src: 
 		url('https://andrew-dev.com/assets/fonts/Montserrat-ThinItalic.eot?#iefix') format('embedded-opentype'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-ThinItalic.woff') format('woff'),
 		url('https://andrew-dev.com/assets/fonts/Montserrat-ThinItalic.ttf') format('truetype');
