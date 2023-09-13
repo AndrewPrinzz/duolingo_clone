@@ -1,46 +1,55 @@
-# Getting Started with Create React App
+# Duolingo Clone 🎵
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Duolingo clone. I created this clone to gain experience in TypeScript and for learning new languages.
 
-## Available Scripts
+## 🎥 Demo/Preview
 
-In the project directory, you can run:
+Dive into the project on my website: [https://duolingo-clone.andrew-dev.com/](https://duolingo-clone.andrew-dev.com/)
+For a visual walkthrough, take a glance at my Instagram post: [https://www.instagram.com/p/Cv9osaBty-L/](https://www.instagram.com/p/Cv9osaBty-L/)
 
-### `npm start`
+## 🚦 Running the Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+You can run the application by visiting my website at [https://duolingo-clone.andrew-dev.com/](https://duolingo-clone.andrew-dev.com/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## ⚡ Technologies
 
-### `npm test`
+### App:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `React.js`
+- `TypeScript`
+- `WordPress`: Used as the backend, offering RESTful services and content management.
+- `Emotion (babel-plugin, core, css, react, styled)`
+- `Axios`: For making HTTP requests.
+- `Bootstrap`
+- `React Router DOM`: For routing and navigation.
 
-### `npm run build`
+## 🚀 How it works
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The main functionality of the project is creating sentences
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+👨‍💻 The user is presented with a few words to choose from
+🤔 Then, they select words from the screen to build a sentence
+✔️ Upon submitting, the application indicates whether the constructed sentence is correct.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+🛠 For the backend, I've employed WordPress, coupled with the Advanced Custom Fields and ACF to REST API plugins.
 
-### `npm run eject`
+## 💭 Process and Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. The journey began with designing in Figma. I borrowed certain elements from the original Duolingo.
+2. For the backend, WordPress was my choice. With the Advanced Custom Fields plugin and the ACF to REST API plugin, it became the backbone of my application. This setup empowers me to introduce new languages, define language-specific topics, and craft sentences for those topics.
+3. Several key pages were brought to life:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- `Main page`
+- `Select language`. For example, English.
+- `Choose a topic`. For example, Present Simple.
+- `Sentence Builder`. This is where users engage in sentence construction. For example, you need to translate from Russian to English.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 🤔 How can it be improved?
 
-## Learn More
+- Add a dark theme
+- A counter for created sentences, letting users monitor their progress.
+- Add animations as in Duolingo
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+In general, mirroring Duolingo's interactive behavior could be the way forward.
